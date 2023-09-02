@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{9cf8bd07-615c-41af-8806-3ff2979045bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\templates">
+      <UniqueIdentifier>{bc3c89bd-5bd4-403a-b306-a9eb90f8d796}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\Ruc.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\RucDecl.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\RucTypes.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\Core\Core.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\Core\CoreDecl.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\Core\CoreTypes.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\Core\Status.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\Core\templates\Status.hpp">
+      <Filter>Core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Ruc\Core\Macro.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
