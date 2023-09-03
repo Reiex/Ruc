@@ -41,4 +41,14 @@ do {																		\
 		(status).setErrorMessage(__PRETTY_FUNCTION__, __LINE__, message);	\
 		return returnValue;													\
 	}																		\
-} while(0)
+} while (0)
+
+#define RUC_RELAY(status, returnValue)										\
+do {																		\
+	ruc::Status& relayedStatus = (status);									\
+	if (!relayedStatus)														\
+	{																		\
+		relayedStatus.relayErrorMessage(__PRETTY_FUNCTION__, __LINE__);		\
+		return returnValue;													\
+	}																		\
+} while (0)
