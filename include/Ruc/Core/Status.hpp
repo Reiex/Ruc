@@ -31,3 +31,14 @@ namespace ruc
 		std::string errorMessage;
 	};
 }
+
+#define RUC_VOID
+
+#define RUC_CHECK(status, returnValue, condition, message)					\
+do {																		\
+	if (!(condition))														\
+	{																		\
+		(status).setErrorMessage(__PRETTY_FUNCTION__, __LINE__, message);	\
+		return returnValue;													\
+	}																		\
+} while(0)

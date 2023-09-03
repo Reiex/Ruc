@@ -7,8 +7,10 @@
 
 #pragma once
 
+// __PRETTY_FUNCTION__
+
 #if defined(__GNUC__)
-	// __PRETTY_FUNCTION__ is already defined
+	// Already defined
 #elif defined(_MSC_VER)
 	#define __PRETTY_FUNCTION__ __FUNCSIG__
 #else
