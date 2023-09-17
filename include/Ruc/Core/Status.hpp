@@ -45,7 +45,7 @@ do {																			\
 
 #define RUC_RELAYCOPY(statusToCheck, statusToSet, returnValue)		\
 do {																\
-	const ruc::Status& statusFrom = (statusToCheckAndSet);			\
+	const ruc::Status& statusFrom = (statusToCheck);				\
 	if (!statusFrom)												\
 	{																\
 		ruc::Status& statusTo = (statusToSet);						\
