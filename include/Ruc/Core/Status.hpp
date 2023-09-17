@@ -53,7 +53,7 @@ do {																\
 		statusTo.relayErrorMessage(__PRETTY_FUNCTION__, __LINE__);	\
 		return returnValue;											\
 	}																\
-}
+} while (0)
 
 #define RUC_RELAY(statusToCheckAndSet, returnValue)					\
 do {																\
