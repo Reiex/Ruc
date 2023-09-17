@@ -34,21 +34,33 @@ namespace ruc
 
 #define RUC_VOID
 
-#define RUC_CHECK(status, returnValue, condition, message)					\
-do {																		\
-	if (!(condition))														\
-	{																		\
-		(status).setErrorMessage(__PRETTY_FUNCTION__, __LINE__, message);	\
-		return returnValue;													\
-	}																		\
+#define RUC_CHECK(statusToSet, returnValue, condition, message)					\
+do {																			\
+	if (!(condition))															\
+	{																			\
+		(statusToSet).setErrorMessage(__PRETTY_FUNCTION__, __LINE__, message);	\
+		return returnValue;														\
+	}																			\
 } while (0)
 
-#define RUC_RELAY(status, returnValue)										\
-do {																		\
-	ruc::Status& relayedStatus = (status);									\
-	if (!relayedStatus)														\
-	{																		\
-		relayedStatus.relayErrorMessage(__PRETTY_FUNCTION__, __LINE__);		\
-		return returnValue;													\
-	}																		\
+#define RUC_RELAYCOPY(statusToCheck, statusToSet, returnValue)		\
+do {																\
+	const ruc::Status& statusFrom = (statusToCheckAndSet);			\
+	if (!statusFrom)												\
+	{																\
+		ruc::Status& statusTo = (statusToSet);						\
+		statusTo.errorMessage = statusFrom.errorMessage;			\
+		statusTo.relayErrorMessage(__PRETTY_FUNCTION__, __LINE__);	\
+		return returnValue;											\
+	}																\
+}
+
+#define RUC_RELAY(statusToCheckAndSet, returnValue)					\
+do {																\
+	ruc::Status& status = (statusToCheckAndSet);					\
+	if (!status)													\
+	{																\
+		status.relayErrorMessage(__PRETTY_FUNCTION__, __LINE__);	\
+		return returnValue;											\
+	}																\
 } while (0)
