@@ -23,8 +23,8 @@ namespace ruc
 
 		constexpr operator bool() const;
 
-		constexpr Status& setErrorMessage(const std::string_view& funcName, uint64_t line, const std::string_view& message);
-		constexpr Status& relayErrorMessage(const std::string_view& funcName, uint64_t line);
+		constexpr void setErrorMessage(const std::string_view& funcName, uint64_t line, const std::string_view& message);
+		constexpr void relayErrorMessage(const std::string_view& funcName, uint64_t line);
 
 		constexpr ~Status() = default;
 
