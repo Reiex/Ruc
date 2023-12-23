@@ -9,15 +9,17 @@
 
 cmake_minimum_required(VERSION 3.21)
 
-project(SciPP)
+project(Ruc)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
+option(RUC_LIBRARY_ONLY "Build only the library")
+
 # Ruc examples
 
-if(NOT DEFINED RUC_LIB_ONLY)
+if(NOT DEFINED RUC_LIBRARY_ONLY)
 
     add_executable(
         ruc-examples
