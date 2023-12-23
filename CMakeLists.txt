@@ -11,11 +11,9 @@ project(Ruc)
 
 set(CMAKE_CXX_STANDARD 23)
 
-set(
-    RUC_EXAMPLES_SOURCES
-    examples/main.cpp
+add_executable(
+    ruc-examples
+    ${CMAKE_CURRENT_LIST_DIR}/examples/main.cpp
 )
 
-add_executable(RucExamples ${RUC_EXAMPLES_SOURCES})
-
-target_include_directories(RucExamples PUBLIC include)
+target_include_directories(ruc-examples PUBLIC include)
