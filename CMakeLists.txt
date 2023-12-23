@@ -19,7 +19,7 @@ option(RUC_LIBRARY_ONLY "Build only the library")
 
 # Ruc examples
 
-if(NOT DEFINED RUC_LIBRARY_ONLY)
+if(NOT RUC_LIBRARY_ONLY)
 
     add_executable(
         ruc-examples
