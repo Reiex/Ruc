@@ -15,11 +15,11 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
-option(RUC_LIBRARY_ONLY "Build only the library")
-
 # Ruc examples
 
-if(NOT RUC_LIBRARY_ONLY)
+option(RUC_ADD_EXAMPLES "Add target ruc-examples" ON)
+
+if(RUC_ADD_EXAMPLES)
 
     add_executable(
         ruc-examples
