@@ -2,7 +2,7 @@
 ##! \file
 ##! \author Pélégrin Marius
 ##! \copyright The MIT License (MIT)
-##! \date 2023
+##! \date 2023-2024
 #######################################################################################################################
 
 # Global project definitions
@@ -32,9 +32,9 @@ add_custom_target(
 
 # Ruc examples
 
-option(RUC_ADD_EXAMPLES "Add target ruc-examples" ON)
+option(RUC_BUILD_EXAMPLES "Add target ruc-examples" ON)
 
-if(RUC_ADD_EXAMPLES)
+if(RUC_BUILD_EXAMPLES)
 
     add_executable(
         ruc-examples
